@@ -1,5 +1,5 @@
 {
-    "name": "yii2lab/yii2-offline",
+    "name": "yii2module/yii2-offline",
     "type": "yii2-extension",
     "authors": [
         {
@@ -10,7 +10,7 @@
 	"minimum-stability": "dev",
 	"autoload": {
         "psr-4": {
-             "yii2lab\\offline\\": "src"
+             "yii2module\\offline\\": "src"
          }
     },
     "require": {}

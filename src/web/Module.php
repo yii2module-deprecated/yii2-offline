@@ -1,6 +1,6 @@
 <?php
 
-namespace yii2lab\offline\web;
+namespace yii2module\offline\web;
 
 use yii\base\Module as YiiModule;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace yii2lab\offline\console\helpers;
+namespace yii2module\offline\console\helpers;
 
 use Yii;
 use woop\foundation\yii\helpers\FileHelper;

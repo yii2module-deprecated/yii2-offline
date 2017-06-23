@@ -1,6 +1,6 @@
 <?php
 
-namespace yii2lab\offline\console;
+namespace yii2module\offline\console;
 
 use yii\base\Module as YiiModule;
 

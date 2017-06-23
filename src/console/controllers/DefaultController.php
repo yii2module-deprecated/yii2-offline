@@ -1,9 +1,9 @@
 <?php
 
-namespace yii2lab\offline\console\controllers;
+namespace yii2module\offline\console\controllers;
 
 use woop\extension\console\yii\console\Controller;
-use yii2lab\offline\console\helpers\ConfigHelper;
+use yii2module\offline\console\helpers\ConfigHelper;
 use woop\extension\console\helpers\input\Question;
 use woop\extension\console\helpers\Output;
 
