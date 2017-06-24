@@ -3,7 +3,7 @@
 /* @var $this \yii\web\View */
 /* @var $content string */
 
-use woop\foundation\helpers\Page;
+use yii2lab\helpers\Page;
 
 $appAsset = APP . '\assets\AppAsset';
 $appAsset::register($this);

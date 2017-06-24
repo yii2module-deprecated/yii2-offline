@@ -3,7 +3,7 @@
 namespace yii2module\offline\console\helpers;
 
 use Yii;
-use woop\foundation\yii\helpers\FileHelper;
+use yii2lab\helpers\yii\FileHelper;
 
 class ConfigHelper
 {
