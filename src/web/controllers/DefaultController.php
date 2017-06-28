@@ -34,6 +34,7 @@ class DefaultController extends Controller
 	}
 	
 	private function displayApi($data) {
+		Yii::$app->response->setStatusCode(500);
 		$serializer = Yii::createObject('yii\rest\Serializer');
 		return $serializer->serialize($data);
 	}
