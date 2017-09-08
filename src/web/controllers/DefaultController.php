@@ -2,6 +2,7 @@
 
 namespace yii2module\offline\web\controllers;
 
+use common\exceptions\PreventionException;
 use Yii;
 use yii\web\Controller;
 
@@ -34,8 +35,6 @@ class DefaultController extends Controller
 	}
 	
 	private function displayApi($data) {
-		Yii::$app->response->setStatusCode(500);
-		$serializer = Yii::createObject('yii\rest\Serializer');
-		return $serializer->serialize($data);
+		throw new PreventionException($data['message']);
 	}
 }
