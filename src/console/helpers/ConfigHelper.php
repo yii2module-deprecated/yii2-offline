@@ -26,7 +26,14 @@ class ConfigHelper
 		$content = str_replace("return [", "return [\n\t" . self::DISABLED_STR . " => ['offline'],\n", $content);
 		FileHelper::save($file, $content);
 	}
-	
+
+	public static function getState()
+	{
+		$file = Yii::getAlias(self::$config);
+		$config = include($file);
+		return !empty($config['catchAll']);
+	}
+
 	public static function setState($state)
 	{
 		$file = Yii::getAlias(self::$config);
