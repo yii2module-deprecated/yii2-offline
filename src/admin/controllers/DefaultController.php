@@ -2,7 +2,7 @@
 
 namespace yii2module\offline\admin\controllers;
 
-use common\widgets\Alert;
+use yii2lab\notify\widgets\Alert;
 use Yii;
 use yii\web\Controller;
 use yii2module\offline\admin\forms\ModeForm;
@@ -23,9 +23,9 @@ class DefaultController extends Controller
 				ConfigHelper::setState($mode);
 				$modeStr = $mode ? 'offline' : 'online';
 				if($mode == $currentMode) {
-					Alert::add(['offline/main', 'mode_' . $modeStr . '_already_selected'], Alert::TYPE_WARNING);
+					Yii::$app->notify->flash->send(['offline/main', 'mode_' . $modeStr . '_already_selected'], Alert::TYPE_WARNING);
 				} else {
-					Alert::add(['offline/main', 'success_' . $modeStr], Alert::TYPE_SUCCESS);
+					Yii::$app->notify->flash->send(['offline/main', 'success_' . $modeStr], Alert::TYPE_SUCCESS);
 				}
 				return $this->refresh();
 			}
