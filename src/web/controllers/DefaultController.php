@@ -2,7 +2,7 @@
 
 namespace yii2module\offline\web\controllers;
 
-use common\exceptions\PreventionException;
+use yii2module\offline\exceptions\PreventionException;
 use Yii;
 use yii\web\Controller;
 
