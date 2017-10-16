@@ -9,5 +9,7 @@ use yii\base\Module as YiiModule;
  */
 class Module extends YiiModule
 {
+
+	public static $langDir = '@yii2module/offline/web/messages';
 	
 }
