@@ -31,7 +31,7 @@ if($model->mode) {
 
 	</div>
 	<div class="box-footer">
-		<?= Html::submitButton(t('action', 'SEND'), ['class' => 'btn btn-primary', 'name' => 'clear-button']) ?>
+		<?= Html::submitButton(t('action', 'send'), ['class' => 'btn btn-primary', 'name' => 'clear-button']) ?>
 	</div>
 	<?php ActiveForm::end(); ?>
 </div>
