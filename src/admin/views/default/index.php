@@ -9,12 +9,12 @@ use yii\helpers\Html;
 use kartik\widgets\ActiveForm;
 use yii2lab\widgets\SwitchInput;
 
-$this->title = t('offline/main', 'title');
+$this->title = Yii::t('offline/main', 'title');
 
 if($model->mode) {
 	echo Alert::widget([
 		'options' => ['class' => 'alert-info'],
-		'body' => t('offline/main', 'offline_mode_enabled_info'),
+		'body' => Yii::t('offline/main', 'offline_mode_enabled_info'),
 	]);
 }
 ?>
@@ -23,8 +23,8 @@ if($model->mode) {
 	<?php $form = ActiveForm::begin(['options' => ['class' => 'form-vertical']]); ?>
 	<div class="box-body">
 		<?= $form->field($model, 'mode')->widget(SwitchInput::classname(), SwitchInput::config([
-			'onText' => t('action', 'offline'),
-			'offText' => t('action', 'online'),
+			'onText' => Yii::t('action', 'offline'),
+			'offText' => Yii::t('action', 'online'),
 			'onColor' => 'danger',
 			'offColor' => 'success',
 		])) ?>

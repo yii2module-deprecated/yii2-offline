@@ -19,7 +19,7 @@ class DefaultController extends Controller
 	
 	public function actionIndex($type = 'default')
 	{
-		$data = t('offline/main', $type);
+		$data = Yii::t('offline/main', $type);
 		$display = APP == API ? 'displayApi' : 'displayWeb';
 		return $this->$display($data);
 	}

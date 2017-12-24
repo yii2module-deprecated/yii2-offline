@@ -24,7 +24,7 @@ class ModeForm extends Model
 	public function attributeLabels()
 	{
 		return [
-			'mode' => t('offline/main', 'select_mode'),
+			'mode' => Yii::t('offline/main', 'select_mode'),
 		];
 	}
 
