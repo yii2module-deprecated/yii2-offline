@@ -10,6 +10,9 @@ use yii2lab\console\helpers\Output;
 class DefaultController extends Controller
 {
 	
+	/**
+	 * Set offline mode
+	 */
 	public function actionIndex($option = null)
 	{
 		if(!ConfigHelper::isDetected()) {
