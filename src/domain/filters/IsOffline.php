@@ -3,7 +3,7 @@
 namespace yii2module\offline\domain\filters;
 
 use yii\base\BaseObject;
-use yii2lab\misc\interfaces\FilterInterface;
+use yii2lab\designPattern\filter\interfaces\FilterInterface;
 use yii2mod\helpers\ArrayHelper;
 
 class IsOffline extends BaseObject implements FilterInterface {
