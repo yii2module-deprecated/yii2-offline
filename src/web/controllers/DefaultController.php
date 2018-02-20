@@ -2,7 +2,7 @@
 
 namespace yii2module\offline\web\controllers;
 
-use yii2module\offline\exceptions\PreventionException;
+use yii2module\offline\domain\exceptions\PreventionException;
 use Yii;
 use yii\web\Controller;
 
@@ -17,24 +17,26 @@ class DefaultController extends Controller
 	public $layout = 'default';
 	public $refreshTime = 60;
 	
-	public function actionIndex($type = 'default')
+	public function actionIndex()
 	{
-		$data = Yii::t('offline/main', $type);
-		$display = APP == API ? 'displayApi' : 'displayWeb';
-		return $this->$display($data);
+		if(APP == API) {
+            return $this->displayApi();
+        } else {
+            return $this->displayWeb();
+        }
 	}
 	
-	private function displayWeb($data) {
-		Yii::$app->view->registerMetaTag([
-			'http-equiv' => 'Refresh',
-			'content' => $this->refreshTime,
-		]);
+	private function displayWeb() {
 		return $this->render('index', [
-			'data' => $data,
-		]);
+		    'refreshTime' => $this->refreshTime,
+        ]);
 	}
 	
-	private function displayApi($data) {
-		throw new PreventionException($data['message']);
+	private function displayApi() {
+	    $message =
+            Yii::t('offline/main', 'title')
+            . DOT . SPC .
+            Yii::t('offline/main', 'message');
+		throw new PreventionException($message);
 	}
 }

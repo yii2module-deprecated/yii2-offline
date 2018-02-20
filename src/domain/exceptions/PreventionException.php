@@ -1,6 +1,6 @@
 <?php
 
-namespace yii2module\offline\exceptions;
+namespace yii2module\offline\domain\exceptions;
 
 use Exception;
 use yii\web\HttpException;
