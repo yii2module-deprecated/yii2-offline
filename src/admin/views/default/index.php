@@ -22,7 +22,7 @@ if($model->mode) {
 <div class="box box-primary">
 	<?php $form = ActiveForm::begin(['options' => ['class' => 'form-vertical']]); ?>
 	<div class="box-body">
-		<?= $form->field($model, 'mode')->widget(SwitchInput::classname(), SwitchInput::config([
+		<?= $form->field($model, 'mode')->widget(SwitchInput::class, SwitchInput::config([
 			'onText' => Yii::t('action', 'offline'),
 			'offText' => Yii::t('action', 'online'),
 			'onColor' => 'danger',
