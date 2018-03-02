@@ -1,6 +1,12 @@
 Фильтры
 ===
 
-## yii2module\offline\domain\filters\IsOffline
+## Основное
+
+У всех, представленных ниже фильтров нейспейс такой: `yii2module\offline\domain\filters\*`.
+
+## Фильтры
+
+### IsOffline
 
 проводит проверку статуса оффлайн
