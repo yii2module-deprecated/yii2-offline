@@ -4,6 +4,7 @@ namespace yii2module\offline\console\helpers;
 
 use Yii;
 use yii2lab\helpers\yii\FileHelper;
+use yii2lab\init\domain\exceptions\NotInitApplicationException;
 
 class ConfigHelper
 {
@@ -30,7 +31,10 @@ class ConfigHelper
 	public static function getState()
 	{
 		$file = Yii::getAlias(self::$config);
-		$config = include($file);
+		$config = @include($file);
+		if(!is_array($config)) {
+			throw new NotInitApplicationException();
+		}
 		return !empty($config['catchAll']);
 	}
 
