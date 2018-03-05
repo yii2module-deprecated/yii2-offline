@@ -15,7 +15,7 @@ class DefaultController extends Controller
 	 * @inheritdoc
 	 */
 	public $layout = 'default';
-	public $refreshTime = 60;
+	public $refreshTime = 10;
 	
 	public function actionIndex()
 	{
