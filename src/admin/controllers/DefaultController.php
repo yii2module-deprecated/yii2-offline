@@ -2,7 +2,7 @@
 
 namespace yii2module\offline\admin\controllers;
 
-use yii2lab\notify\domain\widgets\Alert;
+use yii2lab\navigation\domain\widgets\Alert;
 use Yii;
 use yii\web\Controller;
 use yii2module\offline\admin\forms\ModeForm;
