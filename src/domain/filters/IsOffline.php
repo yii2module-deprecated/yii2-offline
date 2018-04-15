@@ -2,18 +2,18 @@
 
 namespace yii2module\offline\domain\filters;
 
-use yii\base\BaseObject;
-use yii2lab\designPattern\filter\interfaces\FilterInterface;
+use yii2lab\designPattern\scenario\base\BaseScenario;
 
-class IsOffline extends BaseObject implements FilterInterface {
+class IsOffline extends BaseScenario {
 
     public $exclude = [];
-
-	public function run($config) {
+	
+	public function run() {
+		$config = $this->getData();
 		if(in_array(APP, $this->exclude)) {
 			unset($config['catchAll']);
 		}
-		return $config;
+		$this->setData($config);
 	}
-	
+ 
 }
