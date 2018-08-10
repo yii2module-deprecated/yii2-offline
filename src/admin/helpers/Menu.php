@@ -2,8 +2,8 @@
 
 namespace yii2module\offline\admin\helpers;
 
-use common\enums\rbac\PermissionEnum;
 use yii2lab\extension\menu\interfaces\MenuInterface;
+use yii2module\offline\domain\enums\OfflinePermissionEnum;
 
 class Menu implements MenuInterface {
 	
@@ -13,7 +13,7 @@ class Menu implements MenuInterface {
 			'url' => 'offline',
 			'module' => 'offline',
 			//'icon' => 'power-off',
-			'access' => PermissionEnum::OFFLINE_MANAGE,
+			'access' => OfflinePermissionEnum::MANAGE,
 		];
 	}
 
