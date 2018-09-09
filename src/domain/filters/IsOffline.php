@@ -2,7 +2,7 @@
 
 namespace yii2module\offline\domain\filters;
 
-use yii2lab\designPattern\scenario\base\BaseScenario;
+use yii2lab\extension\scenario\base\BaseScenario;
 
 class IsOffline extends BaseScenario {
 

@@ -2,10 +2,10 @@
 
 namespace yii2module\offline\console\controllers;
 
-use yii2lab\console\base\Controller;
+use yii2lab\extension\console\base\Controller;
 use yii2module\offline\console\helpers\ConfigHelper;
-use yii2lab\console\helpers\input\Question;
-use yii2lab\console\helpers\Output;
+use yii2lab\extension\console\helpers\input\Question;
+use yii2lab\extension\console\helpers\Output;
 
 class DefaultController extends Controller
 {
