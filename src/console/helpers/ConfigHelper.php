@@ -3,7 +3,7 @@
 namespace yii2module\offline\console\helpers;
 
 use Yii;
-use yii2lab\helpers\yii\FileHelper;
+use yii2lab\extension\yii\helpers\FileHelper;
 use yii2lab\init\domain\exceptions\NotInitApplicationException;
 
 class ConfigHelper
