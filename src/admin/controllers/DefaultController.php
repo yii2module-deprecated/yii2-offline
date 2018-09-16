@@ -23,9 +23,9 @@ class DefaultController extends Controller
 				ConfigHelper::setState($mode);
 				$modeStr = $mode ? 'offline' : 'online';
 				if($mode == $currentMode) {
-					Yii::$domain->navigation->alert->create(['offline/main', 'mode_' . $modeStr . '_already_selected'], Alert::TYPE_WARNING);
+					\App::$domain->navigation->alert->create(['offline/main', 'mode_' . $modeStr . '_already_selected'], Alert::TYPE_WARNING);
 				} else {
-					Yii::$domain->navigation->alert->create(['offline/main', 'success_' . $modeStr], Alert::TYPE_SUCCESS);
+					\App::$domain->navigation->alert->create(['offline/main', 'success_' . $modeStr], Alert::TYPE_SUCCESS);
 				}
 				return $this->refresh();
 			}
