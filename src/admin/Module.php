@@ -3,7 +3,7 @@
 namespace yii2module\offline\admin;
 
 use yii\base\Module as YiiModule;
-use yii2lab\helpers\Behavior;
+use yii2lab\extension\web\helpers\Behavior;
 use yii2module\offline\domain\enums\OfflinePermissionEnum;
 
 /**
