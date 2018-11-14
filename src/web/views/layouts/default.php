@@ -4,7 +4,7 @@
 /* @var $content string */
 
 use yii2lab\applicationTemplate\common\assets\main\MainAsset;
-use yii2lab\helpers\Page;
+use yii2lab\extension\web\helpers\Page;
 
 MainAsset::register($this);
 ?>
